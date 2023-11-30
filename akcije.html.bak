@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/akcije.css">
+	<link rel="stylesheet" href="css/naslov.css">
+	<meta name="keywords" content="toplice, Toplice, spa, Spa">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+	
+	<title>SpaJoy</title> 
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" style="width:16px;height:16px;" href="../ZAVRSNI_RAD/images/favicon.ico">
+	
+</head>
+<body>
+
+<!-- navbar -->
+<header>
+<div class="navbar">
+	<a href="index.html">NASLOVNICA</a>
+
+	<div class="subnav">
+		<button class="subnavbtn">GALERIJA SLIKA <i class="fa fa-caret-down"></i></button>
+		<div class="subnav-content">
+		  <a href="apartmani.html">Apartmani</a>
+		  <a href="hotelske_sobe.html">Hotelske sobe</a>
+		</div>
+	</div>
+	<a href="najam.html">NAJAM</a>
+	<a href="akcije.html">AKCIJE</a>
+	<a href="kontakt.html">KONTAKT</a>
+	<div class="about">
+		<button class="aboutbtn" href="about.html">O NAMA <i class="fa fa-caret-down"></i></button>
+		<div class="about-content">
+			<a href="pp_i_uk.html" target="_blank">Pravila privatnosti</a>
+			<a href="pp_i_uk.html" target="_blank">Uvjeti korištenja</a>
+		</div>
+	</div>
+</div>
+</header>
+
+<h2 class="main"><b>AKCIJE</b></h2>
+
+<div class="home-content">
+	<h3>Pogledajte naše ponude:</h3>
+</div>
+
+<!-- paketi -->
+<h1 style="text-align:center;">PAKETI</h1>
+
+<div class="tab">
+	<button class="tablinks" onclick="openPackage(event, 'obiteljski')" id="defaultOpen">OBITELJSKI</button>
+	<button class="tablinks" onclick="openPackage(event, 'par')">PAR</button>
+	<button class="tablinks" onclick="openPackage(event, 'wellness')">WELLNESS</button>
+	<button class="tablinks" onclick="openPackage(event, 'medicinski')">MEDICINSKI</button>
+</div>
+
+<div id="obiteljski" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<p><b>Ostvarite dodatne pogodnosti ako dolazite kao obitelj</b><br>
+	Dođite kod nas kao obitelj od 4 člana, a mi Vam dajemo 20% popusta.</p>
+	<img id="myImg" class="tabimg" src="../ZAVRSNI_RAD/images/room1.jpg" alt="Hotelska obiteljska soba">
+	<p>Više informacija o apartmanima i hotelima saznajte na našoj stranici klikom na GALERIJU SLIKA.</p>
+</div>
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01">
+	<div id="caption"></div>
+</div>
+<div id="par" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<p><b>Ostvarite dodatne pogodnosti ako dolazite kao par</b><br>
+	Dođite kod nas kao par, a mi Vam dajemo iskustvo koje se ne zaboravlja uz 10% popusta.</p>
+	<img id="myImg2" class="tabimg" src="../ZAVRSNI_RAD/images/room2.jpg" alt="Hotelska soba namjenjena za roditelje i djecu">
+	<p>Više informacija o apartmanima i hotelima saznajte na našoj stranici klikom na GALERIJU SLIKA.</p>
+</div>
+<div id="myModal2" class="modal2">
+	<span class="close2">&times;</span>
+	<img class="modal-content" id="img02">
+	<div id="caption2"></div>
+</div>
+<div id="wellness" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<p><b>Ostvarite dodatne pogodnosti ako dolazite na wellness uz našu WellSpa karticu pogodnosti</b><br>
+	Ako dolazite na wellness, ostvarite pogodnosti WellSpa karticom pogodnosti koju možete zatražiti na prvom posjeti nama.</p>
+	<img id="myImg3" class="tabimg" src="../ZAVRSNI_RAD/images/room3.jpg" alt="Hotelska soba za dvoje">
+	<p>Više informacija o apartmanima i hotelima saznajte na našoj stranici klikom na GALERIJU SLIKA.</p>
+</div>
+<div id="myModal3" class="modal3">
+	<span class="close3">&times;</span>
+	<img class="modal-content" id="img03">
+	<div id="caption3"></div>
+</div>
+<div id="medicinski" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<p><b>Ostvarite dodatne pogodnosti za medicinski tretman u SpaJoy toplicama</b><br>
+	Ako dolazite na medicinski tretman, ponesite Vašu medicinsku dokumentaciju kojom možete ostvariti dodatan popust kod nas.</p>
+	<img id="myImg4" class="tabimg" src="../ZAVRSNI_RAD/images/room4.jpg" alt="Hotelska soba za tri osobe">
+	<p>Više informacija o apartmanima i hotelima saznajte na našoj stranici klikom na GALERIJU SLIKA.</p>
+</div>
+<div id="myModal4" class="modal4">
+	<span class="close4">&times;</span>
+	<img class="modal-content" id="img04">
+	<div id="caption4"></div>
+</div>
+
+<script>
+
+function openPackage(evt, packageName){
+	var i, tabcontent, tablinks;
+	
+//tabcontent
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for(i = 0; i < tabcontent.length; i++){
+		tabcontent[i].style.display = "none";
+	}
+	
+//tablinks
+	tablinks = document.getElementsByClassName("tablinks");
+	for(i = 0; i < tablinks.length; i++){
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	
+	document.getElementById(packageName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
+// modal 1
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var span = document.getElementsByClassName("close")[0];
+var captionText = document.getElementById("caption");
+
+img.onclick = function() {
+	modal.style.display = "block";
+	modalImg.src = this.src;
+	captionText.innerHTML = this.alt;
+}
+
+span.onclick = function() {
+	modal.style.display = "none";
+}
+
+// modal 2
+var modal2 = document.getElementById("myModal2");
+var img2 = document.getElementById("myImg2");
+var modalImg2 = document.getElementById("img02");
+var span2 = document.getElementsByClassName("close2")[0];
+var captionText2 = document.getElementById("caption2");
+
+img2.onclick = function() {
+	modal2.style.display = "block";
+	modalImg2.src = this.src;
+	captionText2.innerHTML = this.alt;
+}
+
+span2.onclick = function() {
+	modal2.style.display = "none";
+}
+
+// modal 3
+var modal3 = document.getElementById("myModal3");
+var img3 = document.getElementById("myImg3");
+var modalImg3 = document.getElementById("img03");
+var span3 = document.getElementsByClassName("close3")[0];
+var captionText3 = document.getElementById("caption3");
+
+img3.onclick = function() {
+	modal3.style.display = "block";
+	modalImg3.src = this.src;
+	captionText3.innerHTML = this.alt;
+}
+
+span3.onclick = function() {
+	modal3.style.display = "none";
+}
+
+// modal 4
+var modal4 = document.getElementById("myModal4");
+var img4 = document.getElementById("myImg4");
+var modalImg4 = document.getElementById("img04");
+var span4 = document.getElementsByClassName("close4")[0];
+var captionText4 = document.getElementById("caption4");
+
+img4.onclick = function() {
+	modal4.style.display = "block";
+	modalImg4.src = this.src;
+	captionText4.innerHTML = this.alt;
+}
+
+span4.onclick = function() {
+	modal4.style.display = "none";
+}
+
+</script>
+
+<div class="social-icons">
+	<h3 class="naslov">Pratite nas i na društvenim mrežama:&nbsp;
+	<a href="https://hr-hr.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+	<a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;
+	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+	<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;
+	<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>&nbsp;
+	</h3>
+</div>
+
+<footer>
+
+	Autor: Karlo &nbsp;&nbsp;&nbsp;
+	<span class="fa fa-copyright">2022. Sva prava pridržana</span> &nbsp;&nbsp;&nbsp;
+
+</footer>
+
+</body>
+</html>

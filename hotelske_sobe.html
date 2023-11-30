@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/hotelske_sobe.css">
+	<link rel="stylesheet" href="css/naslov.css">
+	<meta name="keywords" content="toplice, Toplice, spa, Spa, joy, Joy">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+	
+	<title>SpaJoy</title> 
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" style="width:16px;height:16px;" href="../ZAVRSNI_RAD/images/favicon.ico">
+
+</head>
+<body>
+
+<!-- navbar -->
+<header>
+
+<div class="navbar">
+
+	<a href="index.html">NASLOVNICA</a>
+
+	<div class="subnav">
+		<button class="subnavbtn">GALERIJA SLIKA <i class="fa fa-caret-down"></i></button>
+		<div class="subnav-content">
+		  <a href="apartmani.html">Apartmani</a>
+		  <a href="#hs">Hotelske sobe</a>
+		</div>
+	</div>
+	<a href="najam.html">NAJAM</a>
+	<a href="akcije.html">AKCIJE</a>
+	<a href="kontakt.html">KONTAKT</a>
+	<div class="about">
+		<button class="aboutbtn" href="about.html">O NAMA <i class="fa fa-caret-down"></i></button>
+		<div class="about-content">
+			<a href="pp_i_uk.html" target="_blank">Pravila privatnosti</a>
+			<a href="pp_i_uk.html" target="_blank">Uvjeti korištenja</a>
+		</div>
+	</div>
+</div>
+</header>
+
+<h2 class="naslov">HOTELSKE SOBE</h2>
+<!--
+<section>
+
+	<h3>U izradi...</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec malesuada turpis. Vestibulum at ipsum sit amet mauris commodo porttitor. Aliquam ullamcorper molestie nibh, sed accumsan nunc euismod non. Maecenas eu lectus mi. Proin sed mauris facilisis, vulputate dolor vitae, accumsan lectus. Duis dui odio, bibendum non dictum et, tincidunt id turpis. In aliquam, sapien ut porttitor venenatis, enim dui mattis metus, ut accumsan lacus felis sed felis.</p> &nbsp;&nbsp;
+	<p>Quisque id tincidunt enim. Nulla in nunc mauris. Etiam mattis arcu vel mi luctus commodo. Duis neque neque, semper et est sit amet, finibus elementum magna. Donec vehicula sapien a porta tempor. Fusce quis lacinia purus. Pellentesque finibus enim et mauris rhoncus, a venenatis tortor convallis. Proin sit amet sem semper, sagittis tellus vitae, vestibulum elit.</p> &nbsp;&nbsp;
+	<p>Integer sit amet tortor condimentum, cursus ligula quis, gravida felis. In ultrices tincidunt diam vel tempor. Curabitur id enim nec diam imperdiet aliquet quis at tellus. Vivamus ultricies non erat ut consequat. Maecenas et sem iaculis, gravida ligula et, viverra nisl. Nunc at suscipit arcu. Sed condimentum ac nulla ut porta. Donec scelerisque vel nunc eu cursus. Sed justo metus, varius ut pharetra nec, euismod vitae mi. Curabitur scelerisque efficitur leo sed rhoncus. Quisque vel arcu lorem. Mauris dapibus varius magna. Ut et lacus vel eros egestas cursus in ut ex. Praesent consectetur est risus, eget posuere mi ultricies vitae. Cras rhoncus dapibus libero gravida euismod. Curabitur maximus magna vitae lectus rutrum bibendum.</p>
+	
+</section>
+-->
+<!---------------------------------------------- GALERIJA ------------------------------------------------>
+
+<h2 class="podnaslov">Galerija</h2>
+
+<div class="row">
+	<div class="column">
+	<!--	<a href="../ZAVRSNI_RAD/images/room1.jpg">
+		<img src="../ZAVRSNI_RAD/images/room1.jpg" alt="hotelska_soba1">
+		<div class="desc">Soba za dvije osobe.<br>Ugodan i prigušen ambijent.</div>
+		</a>	-->
+		<img id="myImg" src="../ZAVRSNI_RAD/images/room1.jpg" alt="hotelska_soba1">
+		<div class="desc">Soba za dvije osobe.<br>Ugodan i prigušen ambijent.</div>
+	</div>
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<p class="caption">- Soba za dvije osobe<br>- Ugodan i prigušen ambijent</p>
+	</div>
+	<div class="column">
+	<!--	<a href="../ZAVRSNI_RAD/images/room2.jpg">
+		<img src="../ZAVRSNI_RAD/images/room2.jpg" alt="hotelska_soba2">
+		<div class="desc">Soba za tri osobe.<br>Ugodan, opuštajuć i topal ambijent, pun svjetlosti.</div>
+		</a>	-->
+		<img id="myImg2" src="../ZAVRSNI_RAD/images/room2.jpg" alt="hotelska_soba2">
+		<div class="desc">Soba za tri osobe.<br>Ugodan, opuštajuć i topal ambijent, pun svjetlosti.</div>
+	</div>
+	<div id="myModal2" class="modal2">
+		<span class="close2">&times;</span>
+		<img class="modal-content" id="img02">
+		<p class="caption">- Soba za tri osobe<br>- Ugodan, opuštajuć i topal ambijent<br>- Pun svjetlosti</p>
+	</div>
+	<div class="column">
+	<!--	<a href="../ZAVRSNI_RAD/images/room3.jpg" >
+		<img src="../ZAVRSNI_RAD/images/room3.jpg" alt="hotelska_soba3">
+		<div class="desc">Soba za 4 osobe.<br>Veličina prostora namjenjena za roditelje i djecu.</div>
+		</a>	-->
+		<img id="myImg3" src="../ZAVRSNI_RAD/images/room3.jpg" alt="hotelska_soba3">
+		<div class="desc">Soba za 4 osobe.<br>Veličina prostora namjenjena za roditelje i djecu.</div>
+	</div>
+	<div id="myModal3" class="modal3">
+		<span class="close3">&times;</span>
+		<img class="modal-content" id="img03">
+		<p class="caption">- Soba za 4 osobe<br>- Veličina prostora namjenjena za roditelje i djecu</p>
+	</div>
+	<div class="column">
+	<!--	<a href="../ZAVRSNI_RAD/images/room4.jpg">
+			<img src="../ZAVRSNI_RAD/images/room4.jpg" alt="hotelska_soba4">
+			<div class="desc">Soba za dvije osobe s balkonom.<br>Ugodan ambijent, pogled na bazen.</div>
+		</a>	-->
+		<img id="myImg4" src="../ZAVRSNI_RAD/images/room4.jpg" alt="hotelska_soba4">
+		<div class="desc">Soba za dvije osobe s balkonom.<br>Ugodan ambijent, pogled na bazen.</div>
+	</div>
+	<div id="myModal4" class="modal4">
+		<span class="close4">&times;</span>
+		<img class="modal-content" id="img04">
+		<p class="caption">- Soba za dvije osobe<br>- Balkon<br>- Ugodan ambijent<br>- Pogled na bazen</p>
+	</div>
+	<div class="column">
+	<!--	<a href="../ZAVRSNI_RAD/images/room5.jpg">
+			<img src="../ZAVRSNI_RAD/images/room5.jpg" alt="hotelska_soba5">
+			<div class="desc">Soba za dvije zaljubljene osobe.<br>Romantičan ambijent.</div>
+		</a>	-->
+		<img id="myImg5" src="../ZAVRSNI_RAD/images/room5.jpg" alt="hotelska_soba5">
+		<div class="desc">Soba za dvije zaljubljene osobe.<br>Romantičan ambijent.</div>
+	</div>
+	<div id="myModal5" class="modal5">
+		<span class="close5">&times;</span>
+		<img class="modal-content" id="img05">
+		<p class="caption">- Soba za dvije osobe<br>- Romantičan ambijent</p>
+	</div>
+</div>
+
+<script>
+
+// modal 1
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var span = document.getElementsByClassName("close")[0];
+
+img.onclick = function() {
+	modal.style.display = "block";
+	modalImg.src = this.src;
+}
+
+span.onclick = function() {
+	modal.style.display = "none";
+}
+
+// modal 2
+var modal2 = document.getElementById("myModal2");
+var img2 = document.getElementById("myImg2");
+var modalImg2 = document.getElementById("img02");
+var span2 = document.getElementsByClassName("close2")[0];
+
+img2.onclick = function() {
+	modal2.style.display = "block";
+	modalImg2.src = this.src;
+}
+
+span2.onclick = function() {
+	modal2.style.display = "none";
+}
+
+// modal 3
+var modal3 = document.getElementById("myModal3");
+var img3 = document.getElementById("myImg3");
+var modalImg3 = document.getElementById("img03");
+var span3 = document.getElementsByClassName("close3")[0];
+
+img3.onclick = function() {
+	modal3.style.display = "block";
+	modalImg3.src = this.src;
+}
+
+span3.onclick = function() {
+	modal3.style.display = "none";
+}
+
+// modal 4
+var modal4 = document.getElementById("myModal4");
+var img4 = document.getElementById("myImg4");
+var modalImg4 = document.getElementById("img04");
+var span4 = document.getElementsByClassName("close4")[0];
+
+img4.onclick = function() {
+	modal4.style.display = "block";
+	modalImg4.src = this.src;
+}
+
+span4.onclick = function() {
+	modal4.style.display = "none";
+}
+
+// modal 5
+var modal5 = document.getElementById("myModal5");
+var img5 = document.getElementById("myImg5");
+var modalImg5 = document.getElementById("img05");
+var span5 = document.getElementsByClassName("close5")[0];
+
+img5.onclick = function() {
+	modal5.style.display = "block";
+	modalImg5.src = this.src;
+}
+
+span5.onclick = function() {
+	modal5.style.display = "none";
+}
+
+</script>
+
+<div class="social-icons">
+	<h3 class="naslov">Pratite nas i na društvenim mrežama:&nbsp;
+	<a href="https://hr-hr.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+	<a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;
+	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+	<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;
+	<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>&nbsp;
+	</h3>
+</div>
+
+<footer>
+
+	Autor: Karlo &nbsp;&nbsp;&nbsp;
+	<span class="fa fa-copyright">2022. Sva prava pridržana</span> &nbsp;&nbsp;&nbsp;
+
+</footer>
+
+</body>
+</html>

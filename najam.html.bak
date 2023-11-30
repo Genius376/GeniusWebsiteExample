@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/najam.css">
+	<link rel="stylesheet" href="css/naslov.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+	
+	<title>SpaJoy</title> 
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" style="width:16px;height:16px;" href="../ZAVRSNI_RAD/images/favicon.ico">
+
+</head>
+<body>
+<header>
+<div class="navbar">
+	<a href="index.html">NASLOVNICA</a>
+	<div class="subnav">
+		<button class="subnavbtn">GALERIJA SLIKA <i class="fa fa-caret-down"></i></button>
+		<div class="subnav-content">
+		  <a href="apartmani.html">Apartmani</a>
+		  <a href="hotelske_sobe.html">Hotelske sobe</a>
+		</div>
+	</div>
+	<a href="najam.html">NAJAM</a>
+	<a href="akcije.html">AKCIJE</a>
+	<a href="kontakt.html">KONTAKT</a>
+	<div class="about">
+		<button class="aboutbtn" href="about.html">O NAMA <i class="fa fa-caret-down"></i></button>
+		<div class="about-content">
+			<a href="pp_i_uk.html" target="_blank">Pravila privatnosti</a>
+			<a href="pp_i_uk.html" target="_blank">Uvjeti korištenja</a>
+		</div>
+	</div>
+</div>
+</header>
+
+<h2 class="naslov">NAJAM</h2>
+
+<fieldset>
+
+<div class="contact-content">
+	<div class="row">
+		<div class="contact-form">
+			<div class="form-group">
+				<label for="name">Ime:</label>
+				<input class="field" type="text" name="name" id="name" placeholder="Joe" required />&nbsp;
+			</div>
+				<div class="form-group">
+				<label for="lname">Prezime:</label>
+				<input class="field" type="text" name="lname" id="lname" placeholder="Doe" required />&nbsp;
+			</div>
+			<div class="form-group">
+				<label for="email">E-mail:</label>
+				<input class="field" type="text" name="email" id="email" placeholder="joe@example.com" required />&nbsp;
+			</div>
+			<div class="form-group">
+				<label for="phone">Kontakt:</label>
+				<input class="tel" type="tel" name="phone" id="phone" placeholder="upišite kontakt broj" required />&nbsp;
+			</div>
+			<div class="form-group">
+				<label for="birthday">Datum rođenja:</label>
+				<input type="date" id="date" name="birthday" required />&nbsp;
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="contact-form">
+			<div class="form-group">
+				<label for="smjestaj">Smještaj</label>
+				<select class="smjestaj" id="smjestaj" name="smjestaj">
+					<option id="odabir" name="odabir">-- Odaberite --</option>
+					<option id="apartman" name="apartman">Apartman</option>
+					<option id="hotelska_soba" name="hotelska_soba">Hotelska soba</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="brOsb">Broj osoba:</label>
+				<input class="broj" type="number" name="brOsb" id="brOsb" placeholder="0" required />
+			</div>
+			<div class="form-group">
+				<label for="brDan">Broj dana:</label>
+				<input class="broj" type="number" name="brDan" id="brDan" placeholder="0" required />
+			</div>
+			<input type="submit" value="Potvrdi" class="btn" onclick="submitBtn()"/>
+		</div>
+	</div>
+	<div class="column-table">
+		<p class="cstyle"><b>Cijena jednog noćenja je 100€ po osobi.</b></p>
+
+		<table class="tstyle">
+			<tr>
+				<th>CIJENA</th>
+				<th>BROJ SPAVAĆIH SOBA</th>
+				<th>BROJ NOĆENJA</th>
+			</tr>
+			<tr>
+				<td>100€</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>200€</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>300€</td>
+				<td>3</td>
+				<td>1</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<p class="pstyle">Cijena karte je: &nbsp;<b><span id="potvrda"></b></span></p>
+
+</fieldset>
+
+<script>
+
+function submitBtn() {
+
+	var name = document.getElementById("name").value;
+	var lname = document.getElementById("lname").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+	var date = document.getElementById("date").value;
+	
+	var smjestaj = document.getElementById("smjestaj").value;
+	var odabir = document.getElementById("odabir").value;
+	
+	var osb = document.getElementById("brOsb").value;
+	var dan = document.getElementById("brDan").value;
+	
+	var sum = osb * dan * 100;
+	
+	var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	
+	if(name == '' || lname =='' || date == '' || phone == '')
+	{							
+		alert("Potrebno je ispuniti sva polja");
+	}
+	else if(smjestaj == odabir)
+	{
+		alert("Potrebno je odabrati smještaj");
+	}
+	else if(osb <= 0)
+	{
+		alert("Potrebno je unijeti broj osoba");
+	}
+	else if(dan <= 0){
+		alert("Potrebno je unijeti broj dana");
+	}
+	else if (!email_val.test(email))
+	{
+		alert("Unesite ispravnu e-mail adresu");
+	}
+	else 
+	{
+		alert("Cijena je " + sum + "€");
+		document.getElementById("potvrda").innerHTML = sum + "€";
+		window.location.href;
+	}
+}
+
+</script>
+
+<div class="social-icons">
+	<h3 class="naslov">Pratite nas i na društvenim mrežama:&nbsp;
+	<a href="https://hr-hr.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+	<a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;
+	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+	<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;
+	<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>&nbsp;
+	</h3>
+</div>
+
+<footer>
+
+	Autor: Karlo &nbsp;&nbsp;&nbsp;
+	<span class="fa fa-copyright">2022. Sva prava pridržana</span> &nbsp;&nbsp;&nbsp;
+
+</footer>
+
+</body>
+</html>
